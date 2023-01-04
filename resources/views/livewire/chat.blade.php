@@ -5,7 +5,7 @@
                 <div class="mesgs">
                     <div id="chat" class="msg_history">
                     @forelse ($messages as $message)
-                        @if ($message->name == auth()->user()->name)
+                        @if ($message->user_id == auth()->user()->id)
                                 <div class="outgoing_msg">
                                     <div class="sent_msg">
                                         <p>{{ $message->message }}</p>
