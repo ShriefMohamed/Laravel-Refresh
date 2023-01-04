@@ -17,7 +17,7 @@ class Chat extends Component
     public function render()
     {
         $messages = DB::table('messages')
-            ->leftJoin('users', 'users.id', '=', 'messages.user-id')
+            ->leftJoin('users', 'users.id', '=', 'messages.user_id')
             ->select('messages.*', 'users.name')
             ->latest()
             ->take(10)
@@ -32,7 +32,7 @@ class Chat extends Component
     {
         $this->validate();
         Messages::create([
-            'user-id' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'message' => $this->message
         ]);
         $this->reset('message');

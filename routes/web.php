@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +28,6 @@ Route::get('/services', [PagesController::class, 'services']);
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
-Route::post('/profile_update', [HomeController::class, 'profile_update'])->name('profile_update');
-Route::get('/chat', [HomeController::class, 'chat'])->name('chat');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::post('/profile_update', [ProfileController::class, 'profile_update'])->name('profile_update');
+Route::get('/chat', [ChatController::class, 'index'])->name('chat');
