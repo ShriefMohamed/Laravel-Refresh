@@ -24,7 +24,6 @@ class Chat extends Component
             ->get()
             ->sortBy('id');
 //        $messages = Messages::with('user')->latest()->take(10)->get()->sortBy('id');
-
         return view('livewire.chat', compact( 'messages'));
     }
 

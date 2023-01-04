@@ -17,6 +17,6 @@ class UserRegisterationEmail extends TestCase
     public function test_user_registeration_email()
     {
         $user = DB::table('users')->where('id', 1)->first();
-        var_dump($user);
+
     }
 }

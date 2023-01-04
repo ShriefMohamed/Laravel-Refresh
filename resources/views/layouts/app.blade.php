@@ -63,10 +63,10 @@
                                     <a class="dropdown-item" href="{{ route('home') }}">
                                         {{ __('Home') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                    <a class="dropdown-item" href="{{ url('profile') }}">
                                         {{ __('Profile') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('chat') }}">
+                                    <a class="dropdown-item" href="{{ url('chat') }}">
                                         {{ __('Chat') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
