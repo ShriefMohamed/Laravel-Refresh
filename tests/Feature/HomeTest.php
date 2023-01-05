@@ -2,21 +2,22 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
-class UserRegisterationEmail extends TestCase
+class HomeTest extends TestCase
 {
     /**
      * A basic feature test example.
      *
      * @return void
      */
-    public function test_user_registeration_email()
+    public function test_homepage()
     {
-        $user = DB::table('users')->where('id', 1)->first();
-
+        $user = User::factory()->create();
+        $this->actingAs($user)->get('/home')->assertStatus(200);
     }
 }
