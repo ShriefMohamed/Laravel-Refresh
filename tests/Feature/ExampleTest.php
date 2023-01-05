@@ -20,9 +20,4 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
-
-    public function test_the_application_sends_emails()
-    {
-
-    }
 }
